@@ -80,5 +80,6 @@ class TestSVIModule(unittest.TestCase):
         batch = (x, y)
 
         # Just run training step to see if it crashes
-        loss = module.training_step(batch, 0)
-        self.assertIn("loss", loss)
+        # Manual optimization returns None
+        output = module.training_step(batch, 0)
+        self.assertIsNone(output)
