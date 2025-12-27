@@ -24,5 +24,6 @@ packages = ["src/svi"]
 
 [tool.uv]
 dev-dependencies = [
+    "pre-commit>=4.5.1",
     "pytest>=8.0.0",
 ]
